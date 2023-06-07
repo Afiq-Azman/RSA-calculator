@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Private & Public Keys Generator</title>
+<link rel="stylesheet" href="style.css">
+<!--Name: Muhammad Afiq Bin Azman
+	Group: CS2306C
+	SID: 2020482996
+	CSC669 -->
+<script src="javascript.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Public & Private Key Generator</h2>
+		<br>
+		<form>
+		<fieldset>
+			<legend>KEY GENERATOR</legend>
+			<table>
+				<tr>
+					<th colspan=2>PLEASE ENTER PRIME NUMBERS FOR p AND q!</th>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="width: 200px;">Value of p</td>
+					<td><input type="number" id="p" style="width: 300px;"></td>
+				</tr>
+				<tr>
+					<td>Value of q</td>
+					<td><input type="number" id="q" style="width: 300px;"></td>
+				</tr>
+				<tr style="height: 50px;">
+					<td colspan=2 style="text-align: center;"><input type="button" value="CALCULATE" onClick="doCalculate()"></td>
+				</tr>
+				<tr>
+					<td colspan=2 style="text-align: center;"><b>CALCULATION</b></td>
+				</tr>
+				<tr>
+					<td>n = pq</td>
+					<td><input type="number" id="n" disabled></td>
+				</tr>
+				<tr>
+					<td>(p-1)*(q-1)</td>
+					<td><input type="number" id="on" size="50" disabled></td>
+				</tr>
+				<tr>
+					<td>e</td>
+					<td><input type="number" id="e" size="50" disabled></td>
+				</tr>
+				<tr>
+					<td>d</td>
+					<td><input type="number" id="d" size="50" disabled></td>
+				</tr>
+				<tr style="height: 50px;">
+					<td colspan=2 style="text-align: center;"><b>RESULT</b></td>
+				</tr>
+				<tr>
+					<td>Private Key (e,n)</td>
+					<td><input type="text" id="public" size="50" disabled></td>
+				</tr>
+				<tr>
+					<td>Public Key (d,n)</td>
+					<td><input type="text" id="private" size="50" disabled></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>ENCRYPTION</legend>
+			<table>
+				<tr>
+					<td style="width: 150px;">Enter Message </td>
+					<td><input type="text" id="m"></td>
+				</tr>
+				<tr style="height: 50px;">
+					<td colspan=2 style="text-align: center;"><input type="button" value="ENCRYPT" onClick="doEncrypt()"></td>
+				</tr>
+				<tr>
+					<td>Encrypted Message </td>
+					<td><input type="text" id="c" disabled></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>DECRYPTION</legend>
+			<table>
+				<tr>
+					<td style="width: 150px;">Enter Encrypted Message </td>
+					<td><input type="text" id="c2"></td>
+				</tr>
+				<tr style="height: 50px;">
+					<td colspan=2 style="text-align: center;"><input type="button" value="DECRYPT" onClick="doDecrypt()"></td>
+				</tr>
+				<tr>
+					<td>Decrypted Message </td>
+					<td><input type="text" id="m2" disabled></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<input type="reset" value="CLEAR">
+		</form>
+	</div>
+</body>
+</html>
